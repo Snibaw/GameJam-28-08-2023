@@ -20,7 +20,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.1840315, y: 0.04161508, z: 0.07808614}
+        value: {x: -0.002603799, y: -0.03524858, z: 0.021005228}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: -0.002603799, y: -0.03524858, z: 0.021005228}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,7 +38,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0.18403153, y: 0.041615084, z: 0.1246}
+        value: {x: -0.002603799, y: -0.03524858, z: 0.0511}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -39,13 +48,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SM_PorteDAscBas
+    path: SM_PorteDAscHaut3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.1840315, y: 0.04161508, z: 0.10120713}
+        value: {x: -0.01545721, y: -0.03524858, z: -0.01065613}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -53,8 +62,17 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
+        time: 0.5
+        value: {x: -0.01545721, y: -0.03524858, z: 0.0218}
+        inSlope: {x: 0, y: 0, z: 0.0625509}
+        outSlope: {x: 0, y: 0, z: 0.0625509}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
         time: 1
-        value: {x: 0.18403153, y: 0.041615084, z: 0.1257}
+        value: {x: -0.01545721, y: -0.03524858, z: 0.051894777}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -64,7 +82,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SM_PorteGAscBas
+    path: SM_PorteDAscHaut2
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -76,14 +94,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2373243020
+      path: 3934397423
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3164391953
+      path: 2642744185
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -116,7 +134,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1840315
+        value: -0.002603799
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.002603799
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -125,7 +152,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.18403153
+        value: -0.002603799
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -136,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: SM_PorteDAscBas
+    path: SM_PorteDAscHaut3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -144,7 +171,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.04161508
+        value: -0.03524858
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.03524858
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -153,7 +189,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.041615084
+        value: -0.03524858
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -164,7 +200,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: SM_PorteDAscBas
+    path: SM_PorteDAscHaut3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -172,7 +208,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.07808614
+        value: 0.021005228
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.021005228
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -181,7 +226,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.1246
+        value: 0.0511
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -192,7 +237,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: SM_PorteDAscBas
+    path: SM_PorteDAscHaut3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -200,7 +245,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1840315
+        value: -0.01545721
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.01545721
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -209,7 +263,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.18403153
+        value: -0.01545721
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -220,7 +274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: SM_PorteGAscBas
+    path: SM_PorteDAscHaut2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -228,7 +282,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.04161508
+        value: -0.03524858
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.03524858
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -237,7 +300,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.041615084
+        value: -0.03524858
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -248,7 +311,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: SM_PorteGAscBas
+    path: SM_PorteDAscHaut2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -256,7 +319,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10120713
+        value: -0.01065613
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -264,8 +327,17 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 0.5
+        value: 0.0218
+        inSlope: 0.0625509
+        outSlope: 0.0625509
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 1
-        value: 0.1257
+        value: 0.051894777
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -276,7 +348,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: SM_PorteGAscBas
+    path: SM_PorteDAscHaut2
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

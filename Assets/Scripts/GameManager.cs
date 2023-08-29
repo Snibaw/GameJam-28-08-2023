@@ -27,8 +27,12 @@ public class GameManager : MonoBehaviour
     public GameObject MedecinOutro;
     public GameObject OutroGameObject;
     public GameObject AudioManager;
+    public MeshRenderer endWall;
+    private Material tempoMat;
+    public GameObject endScreen;
 
     private void Start() {
+        endScreen.SetActive(false);
         AudioManager.SetActive(false);
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         postProcessingVolume.gameObject.SetActive(false);
@@ -83,7 +87,14 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        Debug.Log("Game Over");
+        endScreen.SetActive(true);
+        StartCoroutine(GameOverCoroutine());
+    }
+    public IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(2f);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenu");
     }
     public void EarnScorePoints(int points)
     {
@@ -101,7 +112,7 @@ public class GameManager : MonoBehaviour
         blockNoteImage.SetActive(true);
         bequilleItem.SetActive(true);
         pillsBg.SetActive(true);
-
+        Destroy(blockNoteImage, 8f);
     }
     public IEnumerator GetDrunk()
     {
@@ -148,27 +159,25 @@ public class GameManager : MonoBehaviour
     private IEnumerator Outro()
     {
         MusicFadeAway();
-        MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(0,0.76f,0);
+        MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(-0.1f,1f,0);
+        //Get the second material of the mesh renderer
+        tempoMat = endWall.materials[1];
         yield return new WaitForSeconds(1f);
 
         for(int i = 0; i < 10; i++)
         {
 
             postProcessingVolume.gameObject.SetActive(false);
-            if(i!=0)
-            {
-                MedecinOutro.SetActive(true);
-                MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(0,0.76f,0);
-                ZombieOutro.SetActive(false);
-            }
-            yield return new WaitForSeconds(0.33f-0.03f*i);
-            if(i!=0)
-            {
-                MedecinOutro.SetActive(false);
-                ZombieOutro.SetActive(true);
-            }
+            ChangeMaterials(endWall.materials[0]);
+            MedecinOutro.SetActive(true);
+            MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(-0.1f,1f,0);
+            ZombieOutro.SetActive(false);
+            yield return new WaitForSeconds(Mathf.Max(0.1f,0.33f-0.02f*i));
+            MedecinOutro.SetActive(false);
+            ZombieOutro.SetActive(true);
             postProcessingVolume.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.33f-0.03f*i);
+            ChangeMaterials(tempoMat);
+            yield return new WaitForSeconds(Mathf.Max(0.1f,0.33f-0.02f*i));
         }
         yield return new WaitForSeconds(0.25f);
 
@@ -189,15 +198,27 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         postProcessingVolume.gameObject.SetActive(false);
+        ChangeMaterials(endWall.materials[0]);
         MedecinOutro.SetActive(true);
-        MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(0,0.76f,0);
+        MedecinOutro.transform.position = ZombieOutro.transform.position + new Vector3(-0.1f,1f,0);
         ZombieOutro.SetActive(false);
         yield return new WaitForSeconds(2f);
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Credits");
+    }
+    private void ChangeMaterials(Material mat)
+    {
+        Material[] mats = endWall.materials;
+        mats[1] = mat;
+        endWall.materials = mats;
     }
     private void MusicFadeAway()
     {
         GameObject.Find("AudioManager").GetComponent<AudioManager>().FadeAway();
+    }
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

@@ -12,9 +12,11 @@ public class RoomManager : MonoBehaviour
     public GameObject spawnPoint;
     public GameObject EnemiesPrefab;
     private SoundEffectManager soundEffectManager;
+    public GameObject ascenseurButton;
     // Start is called before the first frame update
     void Start()
     {
+        if(ascenseurButton != null) ascenseurButton.SetActive(false);
         soundEffectManager = GameObject.Find("SoundEffectManager").GetComponent<SoundEffectManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -22,6 +24,7 @@ public class RoomManager : MonoBehaviour
         if(other.gameObject.tag == "Player" && !isDoorLocked)
         {
             isDoorLocked = true;
+            if(ascenseurButton!=null) ascenseurButton.SetActive(true);
             soundEffectManager.PlaySoundEffect(4);
             gameManager.OpenCloseDoor(doorNumber);
             SpawnEnemies();
